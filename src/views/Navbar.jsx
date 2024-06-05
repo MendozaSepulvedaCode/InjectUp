@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Drawer, Button } from "antd";
 import { BiAlignRight } from "react-icons/bi";
 import LogoInJectUp from "../assets/LogoI.jpg";
+import { Link } from "react-scroll";
 
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -45,19 +46,44 @@ function Navbar() {
               open={openMenu}
               width={240}
             >
-              <ul>
-                <li>
-                  <a href="/">Inicio</a>
-                </li>
-                <li>
-                  <a href="/">Servicios</a>
-                </li>
-                <li>
-                  <a href="/">Sobre Nosotros</a>
-                </li>
-                <li>
-                  <a href="/">Contactar</a>
-                </li>
+              <ul className="list-drawer">
+                <Link
+                  activeClass="active"
+                  to="inicio"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Inicio
+                </Link>
+                <Link
+                  activeClass="active"
+                  to="servicios"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Servicios
+                </Link>
+                <Link
+                  activeClass="active"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Sobre Nosotros
+                </Link>
+                <div className="social-nav">
+                  <ul>
+                    <li>
+                      <a href="/">Contactar</a>
+                    </li>
+                  </ul>
+                </div>
               </ul>
             </Drawer>
           </>
@@ -65,15 +91,36 @@ function Navbar() {
           <div className={`nav-elements ${openMenu && "active"}`}>
             <div className="links-nav">
               <ul>
-                <li>
-                  <a href="/">Inicio</a>
-                </li>
-                <li>
-                  <a href="/">Servicios</a>
-                </li>
-                <li>
-                  <a href="/">Sobre Nosotros</a>
-                </li>
+                <Link
+                  activeClass="active"
+                  to="inicio"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Inicio
+                </Link>
+                <Link
+                  activeClass="active"
+                  to="servicios"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Servicios
+                </Link>
+                <Link
+                  activeClass="active"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Sobre Nosotros
+                </Link>
               </ul>
             </div>
             <div className="social-nav">

@@ -3,6 +3,7 @@ import "../styles/services.css";
 import webDevelopment from "../assets/web-development.png";
 import appDevelopment from "../assets/app-development.png";
 import softwareDevelopment from "../assets/software-development.png";
+import { Element } from "react-scroll";
 
 function Services() {
   const [palabraActual, setPalabraActual] = useState(0);
@@ -42,32 +43,36 @@ function Services() {
   }, []);
 
   return (
-    <div className="services-container">
-      <div className="services-title">
-        <h5>
-          {palabras.map((palabra, index) => (
-            <span
-              key={index}
-              className={index === palabraActual ? "palabra-seleccionada" : ""}
-            >
-              {index === palabraActual ? mayusPrimeraLetra(palabra) : palabra}
-            </span>
+    <Element name="servicios">
+      <div className="services-container">
+        <div className="services-title">
+          <h5>
+            {palabras.map((palabra, index) => (
+              <span
+                key={index}
+                className={
+                  index === palabraActual ? "palabra-seleccionada" : ""
+                }
+              >
+                {index === palabraActual ? mayusPrimeraLetra(palabra) : palabra}
+              </span>
+            ))}
+          </h5>
+        </div>
+        <div className="services-list">
+          {services.map((service, index) => (
+            <div key={index} className="service-item">
+              <img src={service.imagen} alt={service.titulo} />
+              <h6>{service.titulo}</h6>
+              <p>{service.descripcion}</p>
+              <button className="button-services" href="/about">
+                Cotizar
+              </button>
+            </div>
           ))}
-        </h5>
+        </div>
       </div>
-      <div className="services-list">
-        {services.map((service, index) => (
-          <div key={index} className="service-item">
-            <img src={service.imagen} alt={service.titulo} />
-            <h6>{service.titulo}</h6>
-            <p>{service.descripcion}</p>
-            <button className="button-services" href="/about">
-              Cotizar
-            </button>
-          </div>
-        ))}
-      </div>
-    </div>
+    </Element>
   );
 }
 

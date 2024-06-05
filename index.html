@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpg" href="/src/assets/LogoI.jpg">
+    <link rel="icon" type="image/jpg" href="/src/assets/LogoI.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eleva tu negocio con InjectUp</title>
   </head>
@@ -10,4 +10,21 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyB_dqLXWtNUASMiNWL2MUJQPIDfYftzSZk",
+      authDomain: "injectup-dfef6.firebaseapp.com",
+      projectId: "injectup-dfef6",
+      storageBucket: "injectup-dfef6.appspot.com",
+      messagingSenderId: "249389942272",
+      appId: "1:249389942272:web:169872d1e446148e1f7ae5",
+      measurementId: "G-0DDYE6S526",
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 </html>

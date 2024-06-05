@@ -41,7 +41,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 30%;
-  height: 400px;
+  min-height: 400px;
   background-color: rgba(144, 124, 226, 0.1);
   padding: 20px;
   margin: 0 10px;
@@ -105,7 +105,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .services-list {
     flex-direction: column;
   }
@@ -113,5 +113,14 @@
   .service-item {
     margin: 10px 0;
     width: 90%;
+    height: auto;
+  }
+
+  .services-title h5 {
+    font-size: 30px;
+  }
+
+  .palabra-seleccionada {
+    font-size: 30px;
   }
 }
