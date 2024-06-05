@@ -1,0 +1,168 @@
+.header-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: -80px;
+}
+
+.image-bg-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 80% 50%;
+  z-index: -1;
+}
+
+.content-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* background-color: red; */
+  position: relative;
+  top: 61%;
+  left: 31%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 50%;
+  color: var(--font-color);
+}
+
+.content-header-title-class {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.header-class-website {
+  margin: 0;
+  color: gray;
+  font-size: 14px;
+}
+
+.title-header {
+  font-size: 3.2rem;
+  margin-bottom: 10px;
+  margin: 0;
+  line-height: 4rem;
+}
+
+.title-header span {
+  font-size: 3.4rem;
+  color: var(--primary-color);
+}
+
+.icon-header-title {
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 2.3rem;
+}
+
+.header-bottom {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.description-header {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: gray;
+  width: 80%;
+  margin: 0;
+}
+
+.btn-header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 95px;
+  padding: 15px;
+  margin-top: 30px;
+  transition: all 0.4s;
+}
+
+.btn-header:hover {
+  background-color: var(--font-color);
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 50%;
+  padding: 10px 12px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(90px);
+  animation: bounce 0.7s infinite alternate;
+}
+
+.floating-button svg {
+  color: #fff;
+  margin-top: 3px;
+  font-size: 20px;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(60px);
+  }
+}
+
+@media (max-width: 1385px) {
+  .header-bottom {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 1285px) {
+  .content-header {
+    top: 63%;
+  }
+
+  .title-header {
+    font-size: 2.6rem;
+  }
+
+  .title-header span {
+    font-size: 2.8rem;
+  }
+
+  .icon-header-title {
+    font-size: 1.9rem;
+  }
+
+  .description-header {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .image-bg-header {
+    height: 60%;
+  }
+
+  .content-header {
+    top: 55%;
+  }
+  .title-header {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    width: 60vw;
+  }
+}
