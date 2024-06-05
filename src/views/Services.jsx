@@ -65,7 +65,7 @@ function Services() {
               <img src={service.imagen} alt={service.titulo} />
               <h6>{service.titulo}</h6>
               <p>{service.descripcion}</p>
-              <button className="button-services" href="/about">
+              <button className="button-services" href="https://www.instagram.com/ezzx_18/">
                 Cotizar
               </button>
             </div>

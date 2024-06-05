@@ -80,7 +80,7 @@ function Navbar() {
                 <div className="social-nav">
                   <ul>
                     <li>
-                      <a href="/">Contactar</a>
+                      <a href="https://www.instagram.com/ezzx_18/">Contactar</a>
                     </li>
                   </ul>
                 </div>
@@ -126,7 +126,7 @@ function Navbar() {
             <div className="social-nav">
               <ul>
                 <li>
-                  <a href="/">Contactar</a>
+                  <a href="https://www.instagram.com/ezzx_18/">Contactar</a>
                 </li>
               </ul>
             </div>
